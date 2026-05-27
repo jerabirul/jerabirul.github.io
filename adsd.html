@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Евгений | Парсинг данных</title>
-    <!-- Шрифты -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <!-- Font Awesome 6 (бесплатные иконки) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -14,7 +12,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(145deg, #f9fafc 0%, #eef2f5 100%);
@@ -22,14 +19,11 @@
             line-height: 1.5;
             scroll-behavior: smooth;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
-
-        /* Header / Навигация */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -71,8 +65,6 @@
             background: #0c6bcf;
             transform: scale(1.02);
         }
-
-        /* Hero секция */
         .hero {
             padding: 60px 0 80px;
             display: flex;
@@ -127,8 +119,6 @@
             color: #1e90ff;
             opacity: 0.8;
         }
-
-        /* Секция услуг (карточки) */
         .services {
             padding: 80px 0;
             background: white;
@@ -171,8 +161,6 @@
             margin-bottom: 12px;
             font-size: 24px;
         }
-
-        /* Галерея (примеры работ) */
         .gallery {
             padding: 80px 0;
             background: #f4f8fe;
@@ -196,8 +184,6 @@
             color: #1565c0;
             margin-bottom: 12px;
         }
-
-        /* Форма обратной связи */
         .contact {
             padding: 80px 0;
         }
@@ -236,7 +222,6 @@
         .submit-btn:hover {
             background: #0a5eb6;
         }
-
         footer {
             text-align: center;
             padding: 40px 0 20px;
@@ -250,7 +235,6 @@
     </style>
 </head>
 <body>
-
 <header>
     <div class="container">
         <div class="navbar">
@@ -264,7 +248,6 @@
         </div>
     </div>
 </header>
-
 <main>
     <div class="container">
         <section class="hero">
@@ -282,7 +265,6 @@
             </div>
         </section>
     </div>
-
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title">Что я предлагаю</h2>
@@ -293,7 +275,6 @@
             </div>
         </div>
     </section>
-
     <section id="gallery" class="gallery">
         <div class="container">
             <h2 class="section-title">Примеры работ</h2>
@@ -304,15 +285,14 @@
             </div>
         </div>
     </section>
-
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-form">
                 <h3 style="font-size:28px; margin-bottom:16px;">💬 Обсудить проект</h3>
-                <form action="#" method="post">
-                    <div class="input-group"><input type="text" placeholder="Ваше имя" required></div>
-                    <div class="input-group"><input type="email" placeholder="E-mail или Telegram" required></div>
-                    <div class="input-group"><textarea rows="4" placeholder="Опишите задачу: ссылка на сайт, какие данные нужны..."></textarea></div>
+                <form action="https://formspree.io/f/manywzpl" method="POST">
+                    <div class="input-group"><input type="text" name="name" placeholder="Ваше имя" required></div>
+                    <div class="input-group"><input type="email" name="email" placeholder="Ваш email или Telegram" required></div>
+                    <div class="input-group"><textarea name="message" rows="4" placeholder="Опишите задачу: ссылка на сайт, какие данные нужны..."></textarea></div>
                     <button type="submit" class="submit-btn">Отправить запрос →</button>
                 </form>
                 <p style="margin-top: 20px; font-size:14px;">✅ Бесплатный тестовый выгруз 5–10 позиций до оплаты.</p>
@@ -320,17 +300,13 @@
         </div>
     </section>
 </main>
-
 <footer>
     <div class="container">
         <p>© 2026 Евгений — Парсинг данных на Python. Все права защищены.</p>
     </div>
 </footer>
-
 <script>
-    // Просто для красоты: консольное приветствие
     console.log("Сайт-портфолио Евгения загружен");
-    // можно добавить обработку формы (но для статики не обязательно)
 </script>
 </body>
 </html>
