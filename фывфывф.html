@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Евгений | Парсинг данных</title>
+    <style>
+        /* Это CSS-стили. Они меняют внешний вид сайта */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #1a2c3e;
+            line-height: 1.6;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #1e90ff;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+        .description {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #4a627a;
+        }
+        .services {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            flex: 1;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #1e90ff;
+        }
+        .example {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .price {
+            background: #e8f0fe;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .price strong {
+            font-size: 24px;
+            color: #1e90ff;
+        }
+        .btn {
+            display: inline-block;
+            background: #1e90ff;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #0c6bcf;
+            transform: scale(1.02);
+        }
+        .contact {
+            text-align: center;
+            margin-top: 30px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 768px) {
+            .services {
+                flex-direction: column;
+            }
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📊 Евгений — Парсинг данных</h1>
+
+    <div class="description">
+        Собираю цены, названия, картинки с любых сайтов. Выгружаю в Excel.
+    </div>
+
+    <div class="services">
+        <div class="card">
+            <h3>🛒 Товары</h3>
+            <p>Названия, цены, артикулы, описания, ссылки на фото. С любого интернет-магазина.</p>
+        </div>
+        <div class="card">
+            <h3>🏢 Базы компаний</h3>
+            <p>Телефоны, email, адреса, сайты с карт и справочников.</p>
+        </div>
+        <div class="card">
+            <h3>📈 Цены конкурентов</h3>
+            <p>Мониторинг цен для вашего бизнеса. Анализ рынка под ключ.</p>
+        </div>
+    </div>
+
+    <div class="example">
+        <h2>📁 Пример работы</h2>
+        <p>Спарсил 100 книг с сайта-тренажера. Результат — аккуратный Excel-файл.</p>
+        <img src="https://via.placeholder.com/800x400?text=Пример+Excel+таблицы" alt="Пример таблицы Excel">
+    </div>
+
+    <div class="price">
+        <h2>💰 Цена</h2>
+        <p>Базовый заказ (до 3000 товаров) — <strong>500 рублей</strong></p>
+        <p>Срок выполнения — 1 день</p>
+        <p>✅ Бесплатный тестовый выгруз на 5-10 позиций</p>
+    </div>
+
+    <div class="contact">
+    <h2>📩 Отправить заявку</h2>
+    <form action="https://formspree.io/f/manywzpl" method="POST">
+        <div style="margin-bottom: 15px;">
+            <input type="text" name="name" placeholder="Ваше имя" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <input type="email" name="email" placeholder="Ваш email или Telegram" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <textarea name="message" rows="4" placeholder="Опишите задачу: ссылка на сайт, какие данные нужны..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+        </div>
+        <button type="submit" class="btn">✈️ Отправить запрос</button>
+    </form>
+    <p style="margin-top: 20px; font-size: 14px;">✅ Бесплатный тестовый выгруз 5–10 позиций до оплаты.</p>
+</div>
+
+    <script>
+        // Этот код сработает при нажатии на кнопку
+        const btn = document.getElementById('orderBtn');
+        btn.addEventListener('click', function() {
+            alert('Напишите мне в чат на бирже (Kwork / e-work) или сюда: jacksondjan54@gmail.com');
+        });
+    </script>
+
+</body>
+</html>
